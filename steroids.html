@@ -1,0 +1,186 @@
+<head>
+<!-- Latest compiled and minified CSS -->
+
+
+
+</head>
+
+ <body>
+	 {{> mainLayout }}
+</body>
+
+<template name="mainLayout">
+   {{> navbar}}
+	{{> Template.dynamic template=content}}
+</template>
+	  
+
+
+<template name="main">
+<div class="container-fluid">
+	<div class="row">
+		<form class="col-xs-10 col-xs-offset-1 col-lg-6 col-lg-offset-3">
+			{{#each group in form}}
+			<div class="form-group">
+				<div class="row">
+					<div class="col-xs-6">
+				<label for="{{group.group}}">{{group.label}}</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+					<div class="btn-group" data-toggle="buttons" id="{{group.group}}">
+						{{#each option in group.options}}
+						<label class="btn btn-primary-outline">
+							<input type="radio" class="form-control" name="{{group.group}}" id="{{option.id}}" autocomplete="off">
+							{{option.name}}
+						</label>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+		</div>
+				{{/each}}
+				<div class="form-group row">
+					<label for="duration" class="col-xs-3">Duration</label>
+					<input type="text" class="form-control form-control-sm col-xs-3" id="duration">
+					<small class="text-muted col-xs-3">months</small>
+				</div>
+				<div class="row">
+					<div class="col-xs-3 col-xs-offset-5">
+				<input class="btn btn-danger" type="submit" value="Submit">
+			</div>
+		</div> 
+			</form>
+		</div>
+	</div>
+</template>
+
+<template name="navbar">
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="nav navbar-nav">
+			<button class="dropdown-toggle btn-link" type="button" data-toggle="dropdown" id="menu">Menu</button>
+			<div class="dropdown-menu" arialabelled-by="menu">
+				<a class="dropdown-item" href="/">Home</a>
+				<a class="dropdown-item" href="/search">Search</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="/about">About</a>
+				<!-- <a class="nav-item nav-link" href"/search">Search</a>
+			</div> -->
+			<!-- <form class="form-inline pull-xs-right" role="search">
+				<input type="text" class="form-control" placeholder="Search">
+				<button type="submit" class="btn btn-link btn-xs">Enter</button> -->
+			<!-- </form> -->
+		</div>
+		</div>
+	</div>
+</nav>
+</template>
+
+<!-- <template name="results">
+	<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<ul class="nav nav-pills nav-stacked" role="tablist">
+						{{#each item in items}}
+					 <li class="nav-item"><a class="nav-link" data-toggle="tab" role="tab" href="#{{item.link}}">{{item.name}}</a> </li>
+					 	{{/each}}
+			   	 	</ul>
+				</div>
+		   	 	<div class="tab-content col-md-6 hidden-sm-down">
+					{{#each item in items}}
+		     	   <div class="tab-pane" id="{{item.link}}" role="tabpanel">
+					   {{item.content}}
+				   </div>
+		    	 	{{/each}}
+				</div>
+				// collapse here for sm & down -->
+	 <!-- </div>
+		</div>
+</template> -->
+
+<!-- Template with Collapsible Blue Pills w/ white Icons>
+<!-- <template name="results">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-8 col-xs-offset-2">
+				<ul class="nav nav-pills nav-stacked" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+					{{#each item in items}}
+					<li class="nav-item" role="tab"><a class="nav-link" data-toggle="collapse" data-parent="#accordion"  href="#{{item.link}}"><img src="{{item.icon}}">
+						{{item.name}}</a></li>
+					<div id="{{item.link}}" class="panel-collapse collapse" role="tabpanel">{{item.content}}
+					</div>
+
+					{{/each}}
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+</template> -->
+
+
+<template name="results">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="btn-btn-group-vertical">
+					<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#bone"><img src="/bone.png"> Bone Health</button>
+					<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Cardiovascular</button>
+						<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Etc</button>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="btn-btn-group-vertical">
+						<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#bone"><img src="/bone.png"> Bone Health</button>
+						<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Cardiovascular</button>
+							<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Etc</button>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="btn-btn-group-vertical">
+							<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#bone"><img src="/heart.png"> Bone Health</button>
+							<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/heart.png"> Cardiovascular</button>
+								<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/heart.png"> Etc</button>
+						</div>
+					</div>
+			</div>
+			<div class="row">
+			<div class="collapse" id="bone">
+				<div class="card card-block">
+					Osteoporosis
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+				
+	
+
+<template name="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<p>
+					<button class="btn btn-primary-outline btn-sm" data-toggle="collapse" href="#screening">Screening
+					</button>
+					<button class="btn btn-primary-outline btn-sm" data-toggle="collapse" href="#">Etc
+					</button>
+					<button class='btn btn-primary-outline btn-sm' data-toggle="collapse" href="#treatment">Treatment</button>
+				</p>
+				<div class="collapse" id="screening">
+					<div class="card card-block">
+						Blah blah
+					</div>
+				</div>
+				<div class="collapse" id="treatment">
+					<div class="card card-block">
+						Blah blah
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,69 @@
+/* CSS declarations go here */
+ 
+
+body {
+	font-family: "Avenir";
+	padding-top: 70px;
+}
+
+.row {
+	margin-right: 50px;
+}
+
+label{
+/*	font-size: 14px !important;*/
+	color: black;
+}
+
+.navbar
+{
+	background-color: #3333ff;
+	background-image: none;
+	color: #ffffff;
+}
+
+
+.btn-danger {
+	margin-top: 40px;
+}
+
+
+
+.navbar  .btn-link {
+	color:#ffffff;
+}
+
+
+
+#duration {
+	width: 200px;
+}
+
+
+.tab-pane{
+	background-color: #F0F0F0;
+	height: 400px;
+}
+
+.container {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+li.nav-item {
+	font-size:22px;
+	background-color: #2929b8;
+	margin-top: 1px;
+	height: 70px;
+	border-radius: 5px;
+}
+
+
+a.nav-link {
+	color:#ffffff;
+}
+
+img {
+	height: 30px;
+	width: 30px;
+}
