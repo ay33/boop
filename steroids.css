@@ -35,10 +35,9 @@ label{
 
 
 
-#duration {
+input.form-control  {
 	width: 200px;
 }
-
 
 .tab-pane{
 	background-color: #F0F0F0;

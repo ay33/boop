@@ -1,0 +1,84 @@
+<template name ="results">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12" id="accordion" role="tablist" aria-multiselectable="true">
+				<div class="panel panel-default">
+					<div class = "panel-heading" role="tab" id="b">
+						<h4 class="panel-title">
+						<button class="btn btn-primary-outline btn-block collapsed" data-toggle="collapse" data-parent="#accordion" href="#bone">
+							Bone Health
+						</button>
+					</h4>
+					</div>
+					<div id="bone" class="panel-collapse collapse" role="tabpanel">
+						{{#each item in content}}
+						<p>item.name</p>
+						{{/each}}
+						<p>{{content}}</p>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="c">
+						<h4 class="panel-heading">
+						<button class="btn btn-primary-outline btn-block collapsed" data-toggle="collapse" data-parent="#accordion" href="#cardio">
+							Cardiology
+						</button> 
+					</h4>
+					</div>
+					<div class="panel-collapse collapse" id="cardio" role="tabpanel">
+						Hearts
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="a">
+						<button class="btn btn-primary-outline btn-block collapsed" data-toggle="collapse" data-parent="#accordion" href="#endocrine">
+							Endocrine
+						</button>
+					</div>
+					<div class="panel-collapse collapse" id="endocrine" role="tabpanel">
+						Endocrine 
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+
+
+
+<!--<template name="results">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="btn-btn-group-vertical">
+					<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#bone"><img src="/bone.png"> Bone Health</button>
+					<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Cardiovascular</button>
+						<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Etc</button>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="btn-btn-group-vertical">
+						<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#bone"><img src="/bone.png"> Bone Health</button>
+						<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Cardiovascular</button>
+							<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/cardio.png"> Etc</button>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="btn-btn-group-vertical">
+							<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#bone"><img src="/heart.png"> Bone Health</button>
+							<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/heart.png"> Cardiovascular</button>
+								<button class="btn btn-primary-outline" type="button" data-toggle="collapse" data-target="#cardio"><img src="/heart.png"> Etc</button>
+						</div>
+					</div>
+			</div>
+			<div class="row">
+			<div class="collapse" id="bone">
+				<div class="card card-block">
+					Osteoporosis
+				</div>asdfasf
+			</div>
+		</div>
+	</div>
+</template>
+
+	 -->
